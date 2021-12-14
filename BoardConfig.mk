@@ -30,15 +30,15 @@ DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
 -include device/$(PRODUCT_BRAND)/$(COMMON_SOC)-common/BoardConfigCommon.mk
 
 # Kernel prebuilts
-#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
-#TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-#BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Kernel
-TARGET_KERNEL_CONFIG := pdx_215_defconfig
+#TARGET_KERNEL_CONFIG := pdx_215_defconfig
 
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # TWRP specific build flags
-TW_LOAD_VENDOR_MODULES := "focaltech_fts.ko sec_touchscreen.ko"
+TW_LOAD_VENDOR_MODULES := "sec_touchscreen.ko texfat.ko platform_dlkm.ko swr_ctrl_dlkm.ko tcs3490.ko bu520x1nvx.ko"
 TW_HAPTICS_TSPDRV := true
