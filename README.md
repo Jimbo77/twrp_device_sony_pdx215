@@ -1,4 +1,2 @@
-# ASUS ROG Phone 5(s)
-TWRP device tree for ASUS ROG Phone 5(s)
-a.k.a. "Anakin"
-a.k.a. ZS673KS
+# Sony Xperia 1 III
+TWRP device tree for Sony Xperia 1 III
